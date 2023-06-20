@@ -56,3 +56,35 @@
 .flexColSpace {
   @apply flex flex-col space-y-3;
 }
+
+.heroSection {
+  @apply bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat bg-contain bg-bottom;
+}
+
+.heroContainer {
+  @apply container mx-auto px-6 text-center md:pt-20 pb-52;
+}
+
+.centeredHeading {
+  @apply max-w-2xl mx-auto mb-10 text-3xl font-bold leading-normal mt-14 md:text-4xl;
+}
+
+.centeredParagraph {
+  @apply max-w-sm mx-auto mb-10 text-sm md:max-w-xl md:text-lg;
+}
+
+.generalButton {
+  @apply p-3 rounded-full w-52 bg-accentCyan hover:scale-95;
+}
+
+
+/* Hide vertical scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide vertical scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <script src="assets/js/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
 
     <script>
       if (
@@ -38,12 +39,14 @@
     <!-- Header -->
     <header>
       <!-- Dynamic Logo -->
-      <div class="dynamicLogo"></div>
+      <a href="index.html">
+        <div class="dynamicLogo"></div>
+      </a>
 
       <!-- Menu -->
       <div class="navMenu">
-        <a href="#features" class="navItem">Features</a>
-        <a href="#testimonials" class="navItem">Testimonials</a>
+        <a onclick="openPage('unused')" class="navItem">Features</a>
+        <a onclick="openPage('testimonials')" class="navItem">Testimonials</a>
 
         <!-- Theme Toggle Button -->
         <button id="theme-toggle" class="themeToggleButton">
@@ -78,7 +81,33 @@
       </div>
     </header>
 
-    <!-- Page content to go here -->
+    <!-- Hero -->
+    <section class="heroSection">
+      <div class="heroContainer">
+        <img src="assets/images/introImage.png" alt="" class="mx-auto" />
+
+        <h1 class="centeredHeading">
+          Dillon Rosenkranz<br>
+          Web Portfolio
+        </h1>
+        
+        <p class="centeredParagraph">
+          Browse through some of my experience, projects, education and more! 
+          Social links and contact details can be found below!
+        </p>
+
+        <button class="generalButton">
+          Have a look
+        </button>
+        
+      </div>
+    </section>
+
+
+    <!-- Dynamic Page content to go here -->
+    <section id="mainContent">
+
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -128,6 +157,24 @@
 
           <!-- Social Links -->
           <div class="flex justify-center pb-10 space-x-3">
+            <div>
+              <a href="#" target="_blank">
+                <img
+                  src="assets/images/linkedin.svg"
+                  alt=""
+                  class="p-2 bg-darkBlue rounded-full ficon"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="#" target="_blank">
+                <img
+                  src="assets/images/github.svg"
+                  alt=""
+                  class="p-2 bg-darkBlue rounded-full ficon"
+                />
+              </a>
+            </div>
             <div>
               <a href="#" target="_blank">
                 <img
