@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dillon Rosenkranz Web Developer Portfolio"
+    />
+    <title>Dillon's Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="assets/js/script.js" defer></script>
+
+    <script>
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Dynamic Logo -->
+      <div class="dynamicLogo"></div>
+
+      <!-- Menu -->
+      <div class="navMenu">
+        <a href="#features" class="navItem">Features</a>
+        <a href="#testimonials" class="navItem">Testimonials</a>
+
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="themeToggleButton">
+          <!-- Dark SVG Icon -->
+          <svg
+            id="theme-toggle-dark-icon"
+            class="w-5 h-5 hidden"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            ></path>
+          </svg>
+
+          <!-- Light SVG Icon -->
+          <svg
+            id="theme-toggle-light-icon"
+            class="w-5 h-5 hidden"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Page content to go here -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="footerContainer">
+
+        <!-- Flex Container For All Items -->
+        <div class="footerItems">
+
+          <!-- Email & Phone -->
+          <div class="mt-10 space-y-6">
+            <div class="flex items-center space-x-3 md:-mt-10">
+              <div class="w-6">
+                <img
+                  src="assets/images/icon-phone.svg"
+                  alt=""
+                  class="scale-10"
+                />
+              </div>
+              <div>+353 87 741 8321</div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-6">
+                <img
+                  src="assets/images/icon-email.svg"
+                  alt=""
+                  class="scale-10"
+                />
+              </div>
+              <div>dillonnollid@gmail.com</div>
+            </div>
+          </div>
+
+          <!-- Menus -->
+          <div class="footerMenu">
+            <div class="flexColSpace">
+              <a href="#">About</a>
+              <a href="#">Experience</a>
+              <a href="#">Projects</a>
+              <a href="#">Certificates</a>
+            </div>
+            <div class="flexColSpace">
+              <a href="#">Contact</a>
+              <a href="#">Services</a>
+              <a href="#">Privacy</a>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex justify-center pb-10 space-x-3">
+            <div>
+              <a href="#" target="_blank">
+                <img
+                  src="assets/images/facebook.svg"
+                  alt=""
+                  class="p-2 bg-darkBlue rounded-full ficon"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="#" target="_blank">
+                <img
+                  src="assets/images/instagram.svg"
+                  alt=""
+                  class="p-2 bg-darkBlue rounded-full ficon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
