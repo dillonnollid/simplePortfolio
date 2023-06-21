@@ -45,7 +45,7 @@ function toggleMode() {
 
 function openPage(url) {
   var encodedUrl = encodeURI("views/sections/" + url + ".html");
-
+  
   $('#mainContent').load(encodedUrl,function(){}).hide().fadeIn();
 
   $("body").scrollTop(0);

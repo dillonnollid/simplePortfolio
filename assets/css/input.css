@@ -77,6 +77,10 @@
   @apply p-3 rounded-full w-52 bg-accentCyan hover:scale-95;
 }
 
+.itemContainer {
+  @apply flex flex-col items-center space-y-2 md:w-1/2;
+}
+
 
 /* Hide vertical scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
