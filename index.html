@@ -10,6 +10,7 @@
     />
     <title>Dillon's Portfolio</title>
 
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,7 +47,11 @@
       <!-- Menu -->
       <div class="navMenu">
         <a onclick="openPage('about')" class="navItem">About</a>
-        <a onclick="openPage('unused')" class="navItem">Testimonials</a>
+        <a onclick="openPage('testimonials')" class="navItem">Testimonials</a>
+        <a onclick="openPage('projects')" class="navItem">Projects</a>
+        <a onclick="openPage('experience')" class="navItem">Experience</a>
+        <a onclick="openPage('skills')" class="navItem">Skills</a>
+        <a onclick="openPage('unused')" class="navItem">Unused</a>
 
         <!-- Theme Toggle Button -->
         <button id="theme-toggle" class="themeToggleButton">
@@ -126,17 +131,19 @@
                   class="scale-10"
                 />
               </div>
-              <div>+353 87 741 8321</div>
+              <a href="tel:+353877418321">+353 87 741 8321</a>
             </div>
             <div class="flex items-center space-x-3">
-              <div class="w-6">
-                <img
-                  src="assets/images/icon-email.svg"
-                  alt=""
-                  class="scale-10"
-                />
-              </div>
-              <div>dillonnollid@gmail.com</div>
+                <div class="w-6">
+                  <img
+                    src="assets/images/icon-email.svg"
+                    alt=""
+                    class="scale-10"
+                  />
+                </div>
+                <a href="mailto:email@example.com">
+                  dillonnollid@gmail.com
+                </a>
             </div>
           </div>
 
