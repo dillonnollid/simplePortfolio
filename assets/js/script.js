@@ -1,3 +1,4 @@
+/* Theme Toggler */
 const themeToggleBtn = document.getElementById('theme-toggle')
 const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon')
 const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
@@ -43,10 +44,29 @@ function toggleMode() {
   }
 }
 
+/* Hamburger Menu Toggler */
+const menuButton = document.getElementById('menu-btn')
+const menu = document.getElementById('menu')
+
+menuButton.addEventListener('click', navToggle)
+
+function navToggle() {
+  menuButton.classList.toggle('open')
+  menu.classList.toggle('flex')
+  menu.classList.toggle('hidden')
+}
+
 function openPage(url) {
   var encodedUrl = encodeURI("views/sections/" + url + ".html");
   
   $('#mainContent').load(encodedUrl,function(){}).hide().fadeIn();
+
+  //Close menu when opening page 
+  if (menu.classList.contains('flex')) {
+    menuButton.classList.toggle('open')
+    menu.classList.toggle('flex')
+    menu.classList.toggle('hidden')
+  }
 
   $("body").scrollTop(0);
 }

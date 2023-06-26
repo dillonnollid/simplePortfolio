@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Dillon Rosenkranz Web Developer Portfolio"
-    />
+    <meta name="description" content="Dillon Rosenkranz Web Developer Portfolio" />
     <title>Dillon's Portfolio</title>
 
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -37,53 +34,83 @@
   </head>
 
   <body>
-    <!-- Header -->
     <header>
-      <!-- Dynamic Logo -->
-      <a href="index.html">
-        <div class="dynamicLogo"></div>
-      </a>
+      <nav>
+        <!-- Dynamic Logo -->
+        <a href="index.html">
+          <div class="dynamicLogo"></div>
+        </a>
 
-      <!-- Menu -->
-      <div class="navMenu">
-        <a onclick="openPage('about')" class="navItem">About</a>
-        <a onclick="openPage('testimonials')" class="navItem">Testimonials</a>
-        <a onclick="openPage('projects')" class="navItem">Projects</a>
-        <a onclick="openPage('experience')" class="navItem">Experience</a>
-        <a onclick="openPage('skills')" class="navItem">Skills</a>
-        <a onclick="openPage('unused')" class="navItem">Unused</a>
+        <!-- Menu -->
+        <div class="navMenu">
+          <a onclick="openPage('about')" class="group navItem">About</a>
+          <a onclick="openPage('testimonials')" class="group navItem">Testimonials</a>
+          <a onclick="openPage('projects')" class="group navItem">Projects</a>
+          <a onclick="openPage('experience')" class="group navItem">Experience</a>
+          <a onclick="openPage('skills')" class="group navItem">Skills</a>
+          <a onclick="openPage('unused')" class="group navItem">Unused</a>
 
-        <!-- Theme Toggle Button -->
-        <button id="theme-toggle" class="themeToggleButton">
-          <!-- Dark SVG Icon -->
-          <svg
-            id="theme-toggle-dark-icon"
-            class="w-5 h-5 hidden"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" class="themeToggleButton">
+
+            <!-- Dark SVG Icon -->
+            <svg
+              id="theme-toggle-dark-icon"
+              class="w-5 h-5 hidden"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+
+            <!-- Light SVG Icon -->
+            <svg
+              id="theme-toggle-light-icon"
+              class="w-5 h-5 hidden"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Hamburger Mobile Button -->
+        <div class="md:hidden">
+          <button
+            id="menu-btn"
+            type="button"
+            class="hamburger z-40 block md:hidden focus:outline-none"
           >
-            <path
-              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-            ></path>
-          </svg>
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
 
-          <!-- Light SVG Icon -->
-          <svg
-            id="theme-toggle-light-icon"
-            class="w-5 h-5 hidden"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black">
+        <a onclick="openPage('about')" class="hover:text-pink-500">About</a>
+        <a onclick="openPage('testimonials')" class="hover:text-pink-500">Testimonials</a>
+        <a onclick="openPage('projects')" class="hover:text-pink-500">Projects</a>
+        <a onclick="openPage('experience')" class="hover:text-pink-500">Experience</a>
+        <a onclick="openPage('skills')" class="hover:text-pink-500">Skills</a>
+        <a onclick="openPage('unused')" class="hover:text-pink-500">Unused</a>
+        
+        <button id="theme-toggle" class="themeToggleButton">Toggle Theme</button>
+
       </div>
+
     </header>
 
     <!-- Hero -->
