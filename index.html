@@ -99,7 +99,7 @@
       </nav>
 
       <!-- Mobile Menu -->
-      <div id="menu" class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black">
+      <div id="menu" class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-darkBlue3">
         <a onclick="openPage('about')" class="hover:text-pink-500">About</a>
         <a onclick="openPage('testimonials')" class="hover:text-pink-500">Testimonials</a>
         <a onclick="openPage('projects')" class="hover:text-pink-500">Projects</a>
@@ -113,31 +113,29 @@
 
     </header>
 
-    <!-- Hero -->
-    <section class="heroSection">
-      <div class="heroContainer">
-        <img src="assets/images/introImage.png" alt="" class="mx-auto" />
-
-        <h1 class="centeredHeading">
-          Dillon Rosenkranz<br>
-          Web Portfolio
-        </h1>
-        
-        <p class="centeredParagraph">
-          Browse through some of my experience, projects, education and more! 
-          Social links and contact details can be found below!
-        </p>
-
-        <button class="generalButton">
-          Have a look
-        </button>
-
-      </div>
-    </section>
-
-
     <!-- Dynamic Page content to go here -->
     <div id="mainContent">
+      <!-- Loading Screen -->
+      <section class="heroSection">
+        <div class="heroContainer">
+          <img src="assets/images/introImage.png" alt="" class="mx-auto" />
+
+          <h1 class="centeredHeading">
+            Dillon Rosenkranz<br>
+            Web Portfolio
+          </h1>
+          
+          <p class="centeredParagraph">
+            Browse through some of my experience, projects, education and more! 
+            Social links and contact details can be found below!
+          </p>
+
+          <button class="generalButton" onclick="openPage('about')">
+            Get Started
+          </button>
+
+        </div>
+      </section>
 
     </div>
 

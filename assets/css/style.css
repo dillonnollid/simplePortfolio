@@ -425,6 +425,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 body {
   font-family: Open Sans, sans-serif;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .dark body {
@@ -474,8 +476,23 @@ header {
   max-width: 72rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 8rem;
+  }
+}
+
+nav {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
 }
 
 footer {
@@ -483,13 +500,6 @@ footer {
   background-color: hsl(216 53% 9% / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 600;
 }
 
 /*h1 {
@@ -628,6 +638,14 @@ nav {
   margin-top: 7rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.-mr-1 {
+  margin-right: -0.25rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -660,6 +678,10 @@ nav {
   height: 6rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -678,6 +700,10 @@ nav {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-10 {
@@ -769,9 +795,9 @@ nav {
   border-color: hsl(176 68% 64% / var(--tw-border-opacity));
 }
 
-.bg-black {
+.bg-darkBlue3 {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: hsl(219 30% 18% / var(--tw-bg-opacity));
 }
 
 .bg-darkBlue {
@@ -927,11 +953,6 @@ nav {
   color: hsl(176 68% 64% / var(--tw-text-opacity));
 }
 
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .ficon:hover {
   filter: invert(80%) sepia(37%) saturate(7048%) hue-rotate(132deg)
     brightness(105%) contrast(104%);
@@ -943,7 +964,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
   height: 5rem;
-  width: 12rem;
+  width: 5rem;
   background-image: url('../images/logo-light.svg');
   background-repeat: no-repeat;
 }
@@ -1261,17 +1282,48 @@ nav {
 }
 
 .generalButton {
-  width: 13rem;
-  border-radius: 9999px;
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: hsl(176 68% 64% / var(--tw-bg-opacity));
   padding: 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
 }
 
 .generalButton:hover {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.generalButton:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(96 165 250 / var(--tw-ring-opacity));
+}
+
+.dark .generalButton {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.dark .generalButton:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.dark .generalButton:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(30 64 175 / var(--tw-ring-opacity));
 }
 
 .itemContainer {
@@ -1290,6 +1342,95 @@ nav {
   .itemContainer {
     width: 50%;
   }
+}
+
+.projectsSection {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projectsSection > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.projectsSection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 1rem;
+}
+
+.dark .projectsSection {
+  --tw-bg-opacity: 1;
+  background-color: hsl(217 28% 15% / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .projectsSection {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.projectsCard {
+  max-width: 24rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 1rem;
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.projectsCard:hover {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.dark .projectsCard {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .projectsCard {
+    padding: 2rem;
+  }
+}
+
+.projectsParagraph {
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.dark .projectsParagraph {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.largeHeading {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 /* Hide vertical scrollbar for Chrome, Safari and Opera */
@@ -1388,16 +1529,6 @@ body {
 .dark .dark\:bg-darkBlue2 {
   --tw-bg-opacity: 1;
   background-color: hsl(216 53% 9% / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {

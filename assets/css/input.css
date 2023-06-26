@@ -10,19 +10,19 @@
 @layer base {
 
   body {
-    @apply dark:bg-darkBlue dark:text-white font-opensans;
+    @apply dark:bg-darkBlue text-gray-900 dark:text-white font-opensans;
   }
 
   header {
-    @apply container max-w-6xl mx-auto px-6 py-12;
+    @apply container max-w-6xl md:h-32 mx-auto px-6 py-8;
+  }
+
+  nav {
+    @apply flex items-center my-auto justify-between font-semibold;
   }
 
   footer {
     @apply bg-darkBlue2 text-white;
-  }
-
-  nav {
-    @apply flex items-center justify-between font-semibold;
   }
 
   /*h1 {
@@ -32,7 +32,7 @@
 }
 
 .dynamicLogo {
-  @apply bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10;
+  @apply bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-20 mx-auto md:mx-0 md:absolute top-10 left-10;
 }
 .navMenu {
   @apply hidden md:flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10 cursor-pointer;
@@ -79,13 +79,28 @@
 }
 
 .generalButton {
-  @apply p-3 rounded-full w-52 bg-accentCyan hover:scale-95;
+  @apply inline-flex p-3 w-auto rounded-lg items-center text-center text-sm font-medium bg-accentCyan hover:scale-95 focus:ring-4 focus:outline-none focus:ring-blue-400 dark:bg-blue-600 dark:hover:bg-blue-600 dark:focus:ring-blue-800;
 }
 
 .itemContainer {
   @apply flex flex-col items-center space-y-2 md:w-1/2;
 }
 
+.projectsSection {
+  @apply mx-auto min-h-full items-center justify-between p-4 md:px-12 bg-white dark:bg-darkBlue flex flex-col md:flex-row md:flex-wrap space-y-4;
+}
+
+.projectsCard {
+  @apply max-w-sm shadow-sm hover:shadow-xl p-4 md:p-8 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 ;
+}
+
+.projectsParagraph {
+  @apply mb-3 font-normal text-gray-700 dark:text-gray-400;
+}
+
+.largeHeading {
+  @apply mb-2 text-2xl font-bold tracking-tight;
+}
 
 /* Hide vertical scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
