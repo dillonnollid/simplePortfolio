@@ -18,7 +18,7 @@
   }
 
   nav {
-    @apply flex items-center my-auto justify-between font-semibold;
+    @apply flex items-center my-auto justify-between font-normal;
   }
 
   footer {
@@ -34,10 +34,11 @@
 .dynamicLogo {
   @apply bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-20 mx-auto md:mx-0 md:absolute top-10 left-10;
 }
+
 .navMenu {
   @apply hidden md:flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10 cursor-pointer;
-  
 }
+
 .navItem {
   @apply mx-2 group-hover:border-b hover:text-accentCyan group-hover:border-accentCyan text-black dark:text-white;
 }
@@ -86,16 +87,20 @@
   @apply flex flex-col items-center space-y-2 md:w-1/2;
 }
 
-.projectsSection {
-  @apply mx-auto min-h-full items-center justify-between p-4 md:px-12 bg-white dark:bg-darkBlue flex flex-col md:flex-row md:flex-wrap space-y-4;
+.generalSection {
+  @apply flex flex-col md:flex-row md:flex-wrap mx-auto min-h-full items-center justify-between p-4 md:px-12 bg-white dark:bg-darkBlue space-y-4;
 }
 
-.projectsCard {
-  @apply max-w-sm shadow-sm hover:shadow-xl p-4 md:p-8 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 ;
+.generalContainer {
+  @apply container flex flex-col mx-auto w-full px-6 pb-60 md:pb-80 space-y-6 md:flex-row md:space-y-0 md:space-x-12;
 }
 
-.projectsParagraph {
-  @apply mb-3 font-normal text-gray-700 dark:text-gray-400;
+.generalCard {
+  @apply max-w-lg shadow-sm hover:shadow-xl p-4 md:p-8 md:w-1/3 space-y-6 bg-gray-100 dark:bg-darkBlue2 border border-gray-200 rounded-lg  dark:border-darkBlue3;
+}
+
+.generalParagraph {
+  @apply mb-3 font-normal text-sm leading-5 md:text-lg text-gray-700 dark:text-gray-400;
 }
 
 .largeHeading {

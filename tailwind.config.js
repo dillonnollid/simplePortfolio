@@ -25,6 +25,10 @@ module.exports = {
         'curvy-dark-mode': "url('../images/bg-curvy-dark.svg')",
         'curvy-light-mode': "url('../images/bg-curvy-light.svg')",
       }),
+      maxWidth: {
+        '1/2': '50%',
+        '1/3': '33%',
+      },
     },
   },
   variants: {

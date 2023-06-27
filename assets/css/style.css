@@ -492,7 +492,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 footer {
@@ -603,14 +603,6 @@ footer {
 
 .left-0 {
   left: 0px;
-}
-
-.left-1 {
-  left: 0.25rem;
-}
-
-.-top-2 {
-  top: -0.5rem;
 }
 
 .-top-40 {
@@ -810,11 +802,6 @@ footer {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -882,10 +869,6 @@ footer {
   padding-bottom: 8rem;
 }
 
-.pb-80 {
-  padding-bottom: 20rem;
-}
-
 .pt-24 {
   padding-top: 6rem;
 }
@@ -937,10 +920,6 @@ footer {
 
 .uppercase {
   text-transform: uppercase;
-}
-
-.leading-5 {
-  line-height: 1.25rem;
 }
 
 .text-white {
@@ -1344,7 +1323,7 @@ footer {
   }
 }
 
-.projectsSection {
+.generalSection {
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -1354,25 +1333,25 @@ footer {
   justify-content: space-between;
 }
 
-.projectsSection > :not([hidden]) ~ :not([hidden]) {
+.generalSection > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.projectsSection {
+.generalSection {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 1rem;
 }
 
-.dark .projectsSection {
+.dark .generalSection {
   --tw-bg-opacity: 1;
   background-color: hsl(217 28% 15% / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
-  .projectsSection {
+  .generalSection {
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 3rem;
@@ -1380,49 +1359,141 @@ footer {
   }
 }
 
-.projectsCard {
-  max-width: 24rem;
+.generalContainer {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .generalContainer {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .generalContainer {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .generalContainer {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .generalContainer {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .generalContainer {
+    max-width: 1536px;
+  }
+}
+
+.generalContainer {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.generalContainer > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.generalContainer {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 15rem;
+}
+
+@media (min-width: 768px) {
+  .generalContainer {
+    flex-direction: row;
+  }
+
+  .generalContainer > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+    --tw-space-x-reverse: 0;
+    margin-right: calc(3rem * var(--tw-space-x-reverse));
+    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .generalContainer {
+    padding-bottom: 20rem;
+  }
+}
+
+.generalCard {
+  max-width: 32rem;
+}
+
+.generalCard > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.generalCard {
   border-radius: 0.5rem;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   padding: 1rem;
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.projectsCard:hover {
+.generalCard:hover {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.dark .projectsCard {
+.dark .generalCard {
   --tw-border-opacity: 1;
-  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+  border-color: hsl(219 30% 18% / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  background-color: hsl(216 53% 9% / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
-  .projectsCard {
+  .generalCard {
+    width: 33.333333%;
     padding: 2rem;
   }
 }
 
-.projectsParagraph {
+.generalParagraph {
   margin-bottom: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 400;
+  line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
-.dark .projectsParagraph {
+.dark .generalParagraph {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .generalParagraph {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 .largeHeading {
@@ -1521,35 +1592,18 @@ body {
   background-color: hsl(217 28% 15% / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-darkBlue3 {
-  --tw-bg-opacity: 1;
-  background-color: hsl(219 30% 18% / var(--tw-bg-opacity));
-}
-
 .dark .dark\:bg-darkBlue2 {
   --tw-bg-opacity: 1;
   background-color: hsl(216 53% 9% / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
-  .md\:-top-16 {
-    top: -4rem;
-  }
-
   .md\:-mt-10 {
     margin-top: -2.5rem;
   }
 
   .md\:hidden {
     display: none;
-  }
-
-  .md\:w-20 {
-    width: 5rem;
-  }
-
-  .md\:w-1\/3 {
-    width: 33.333333%;
   }
 
   .md\:w-1\/2 {
@@ -1574,12 +1628,6 @@ body {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .md\:space-x-12 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(3rem * var(--tw-space-x-reverse));
-    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .md\:space-x-16 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(4rem * var(--tw-space-x-reverse));
@@ -1602,17 +1650,13 @@ body {
     padding-right: 4rem;
   }
 
-  .md\:pb-96 {
-    padding-bottom: 24rem;
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 }

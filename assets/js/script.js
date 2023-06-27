@@ -3,15 +3,14 @@ const themeToggleBtn = document.getElementById('theme-toggle')
 const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon')
 const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
 
-if (
-  localStorage.getItem('color-theme') === 'dark' ||
-  (!('color-theme' in localStorage) &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches)
-) {
-  // Show light icon
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+  // Show Light Icons
   themeToggleLightIcon.classList.remove('hidden')
+  setHamburgerColor('white')
 } else {
+  //Show Dark Icons
   themeToggleDarkIcon.classList.remove('hidden')
+  setHamburgerColor('black')
 }
 
 // Listen for toggle button click
@@ -24,19 +23,22 @@ function toggleMode() {
 
   // If is set in localstorage
   if (localStorage.getItem('color-theme')) {
-    // If light, make dark and save in localstorage
+    // If light then toggle to dark and save in localstorage
     if (localStorage.getItem('color-theme') === 'light') {
       document.documentElement.classList.add('dark')
       localStorage.setItem('color-theme', 'dark')
+      setHamburgerColor('white')
     } else {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('color-theme', 'light')
+      setHamburgerColor('black')
     }
   } else {
-    // If not in localstorage
+    // If not in localstorage then add it
     if (document.documentElement.classList.contains('dark')) {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('color-theme', 'light')
+      setHamburgerColor('black')
     } else {
       document.documentElement.classList.add('dark')
       localStorage.setItem('color-theme', 'dark')
@@ -69,4 +71,10 @@ function openPage(url) {
   }
 
   $("body").scrollTop(0);
+}
+
+function setHamburgerColor(colour) {
+  document.querySelector('.hamburger-top').style.background = colour
+  document.querySelector('.hamburger-middle').style.background = colour
+  document.querySelector('.hamburger-bottom').style.background = colour
 }
