@@ -10,7 +10,8 @@
 @layer base {
 
   body {
-    @apply dark:bg-darkBlue text-gray-900 dark:text-white font-opensans;
+    @apply bg-gradient-to-tr from-white to-gray-200 dark:from-darkBlue2 dark:to-darkBlue3 text-gray-900 dark:text-white font-opensans;
+     
   }
 
   header {
@@ -22,7 +23,7 @@
   }
 
   footer {
-    @apply bg-darkBlue2 text-white;
+    @apply bg-darkBlue1 text-white;
   }
 
   /*h1 {
@@ -40,7 +41,7 @@
 }
 
 .navItem {
-  @apply mx-2 group-hover:border-b hover:text-accentCyan group-hover:border-accentCyan text-black dark:text-white;
+  @apply mx-2 group-hover:border-b hover:text-accentCyan group-hover:border-accentCyan hover:underline text-gray-800 dark:text-white;
 }
 
 .themeToggleButton {
@@ -80,7 +81,7 @@
 }
 
 .generalButton {
-  @apply flex flex-col mx-auto content-end select-none items-center justify-center leading-relaxed gap-3 py-4 px-6 my-4 rounded-lg bg-blue-700 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-blue-300/20 transition-all hover:shadow-lg hover:shadow-blue-900/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+  @apply flex flex-row mx-auto content-end select-none items-center justify-center leading-relaxed gap-3 py-4 px-6 my-4 rounded-lg bg-blue-700 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-blue-300/20 transition-all hover:shadow-lg hover:shadow-blue-900/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
 }
 
 .itemContainer {
@@ -96,7 +97,7 @@
 }
 
 .generalCard {
-  @apply h-auto my-8 rounded-md shadow-lg p-4 md:p-8 shadow-gray-200 dark:shadow-gray-900 bg-gray-100 dark:bg-darkBlue3 duration-300 hover:-translate-y-1;
+  @apply h-auto my-8 flex flex-col justify-between rounded-md shadow-lg p-4 md:p-8 shadow-gray-200 dark:shadow-gray-900 bg-gray-100 dark:bg-darkBlue3 duration-300 hover:-translate-y-1 md:opacity-90 md:hover:opacity-70;
   
 }
 
@@ -109,7 +110,15 @@
 }
 
 .largeHeading {
-  @apply mb-8 md:mb-12 text-2xl text-center font-bold tracking-tight underline text-gray-800 dark:text-gray-400 font-opensans;
+  @apply mb-8 md:mb-12 text-2xl text-center font-bold tracking-tight underline text-gray-800 dark:text-gray-400;
+}
+
+.whiteHeading {
+  @apply my-8 md:my-12 text-2xl text-center font-bold tracking-normal underline text-gray-300
+}
+
+.whiteParagraph {
+  @apply mb-3 font-semibold text-sm leading-relaxed md:text-lg text-gray-200 ;
 }
 
 /* Hide vertical scrollbar for Chrome, Safari and Opera */

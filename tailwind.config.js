@@ -20,16 +20,56 @@ module.exports = {
         opensans: ['Open Sans', 'sans-serif'],
       },
       backgroundImage: (theme) => ({
-        'logo-dark-mode': "url('../images/logo-dark.svg')",
-        'logo-light-mode': "url('../images/logo-light.svg')",
+        'logo-dark-mode': "url('../images/icons/logo-dark.svg')",
+        'logo-light-mode': "url('../images/icons/logo-light.svg')",
         'curvy-dark-mode': "url('../images/bg-curvy-dark.svg')",
         'curvy-light-mode': "url('../images/bg-curvy-light.svg')",
+        'head-covert-audio': "url('../images/headCovertAudio.jpeg')",
+        'head-image-exhibition': "url('../images/headImageExhibition.jpeg')",
+        'head-myd': "url('../images/headMyD.jpeg')",
       }),
       maxWidth: {
         '1/2': '50%',
         '1/3': '33%',
       },
     },
+  },
+  'animation': {
+    'gradient-x':'gradient-x 15s ease infinite',
+    'gradient-y':'gradient-y 15s ease infinite',
+    'gradient-xy':'gradient-xy 15s ease infinite',
+  },
+  'keyframes': {
+    'gradient-y': {
+        '0%, 100%': {
+            'background-size':'400% 400%',
+            'background-position': 'center top'
+        },
+        '50%': {
+            'background-size':'200% 200%',
+            'background-position': 'center center'
+        }
+    },
+    'gradient-x': {
+        '0%, 100%': {
+            'background-size':'200% 200%',
+            'background-position': 'left center'
+        },
+        '50%': {
+            'background-size':'200% 200%',
+            'background-position': 'right center'
+        }
+    },
+    'gradient-xy': {
+        '0%, 100%': {
+            'background-size':'400% 400%',
+            'background-position': 'left center'
+        },
+        '50%': {
+            'background-size':'200% 200%',
+            'background-position': 'right center'
+        }
+    }
   },
   variants: {
     extend: {

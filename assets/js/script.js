@@ -42,6 +42,7 @@ function toggleMode() {
     } else {
       document.documentElement.classList.add('dark')
       localStorage.setItem('color-theme', 'dark')
+      setHamburgerColor('white')
     }
   }
   //Close mobile menu if it's open 

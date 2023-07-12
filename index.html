@@ -7,7 +7,7 @@
     <meta name="description" content="Dillon Rosenkranz Web Developer Portfolio" />
     <title>Dillon's Portfolio</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,12 +43,12 @@
 
         <!-- Menu -->
         <div class="navMenu">
-          <a onclick="openPage('about')" class="group navItem">About</a>
-          <a onclick="openPage('testimonials')" class="group navItem">Testimonials</a>
-          <a onclick="openPage('projects')" class="group navItem">Projects</a>
-          <a onclick="openPage('experience')" class="group navItem">Experience</a>
-          <a onclick="openPage('skills')" class="group navItem">Skills</a>
-          <a onclick="openPage('unused')" class="group navItem">Unused</a>
+          <a onclick="openPage('about')" class="navItem">About</a>
+          <a onclick="openPage('testimonials')" class="navItem">Testimonials</a>
+          <a onclick="openPage('projects')" class="navItem">Projects</a>
+          <a onclick="openPage('experience')" class="navItem">Experience</a>
+          <a onclick="openPage('skills')" class="navItem">Skills</a>
+          <a onclick="openPage('unused')" class="navItem">Unused</a>
 
           <!-- Theme Toggle Button -->
           <button id="theme-toggle" class="themeToggleButton">
@@ -101,12 +101,12 @@
 
       <!-- Mobile Menu -->
       <div id="menu" class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-darkBlue3">
-        <a onclick="openPage('about')" class="hover:text-pink-500">About</a>
-        <a onclick="openPage('testimonials')" class="hover:text-pink-500">Testimonials</a>
-        <a onclick="openPage('projects')" class="hover:text-pink-500">Projects</a>
-        <a onclick="openPage('experience')" class="hover:text-pink-500">Experience</a>
-        <a onclick="openPage('skills')" class="hover:text-pink-500">Skills</a>
-        <a onclick="openPage('unused')" class="hover:text-pink-500">Unused</a>
+        <a onclick="openPage('about')" class="hover:text-blue-500">About</a>
+        <a onclick="openPage('testimonials')" class="hover:text-blue-500">Testimonials</a>
+        <a onclick="openPage('projects')" class="hover:text-blue-500">Projects</a>
+        <a onclick="openPage('experience')" class="hover:text-blue-500">Experience</a>
+        <a onclick="openPage('skills')" class="hover:text-blue-500">Skills</a>
+        <a onclick="openPage('unused')" class="hover:text-blue-500">Unused</a>
 
         <a onclick="toggleMode()" class="hover:text-pink-500">Toggle Theme</a>
 
@@ -152,8 +152,8 @@
             <div class="flex items-center space-x-3 md:-mt-10">
               <div class="w-6">
                 <img
-                  src="assets/images/icon-phone.svg"
-                  alt=""
+                  src="assets/images/icons/phone.svg"
+                  alt="Click To Call Phone"
                   class="scale-10"
                 />
               </div>
@@ -162,8 +162,8 @@
             <div class="flex items-center space-x-3 md:-mt-10">
               <div class="w-6">
                 <img
-                  src="assets/images/icon-phone.svg"
-                  alt=""
+                  src="assets/images/icons/phone.svg"
+                  alt="Click To Call Phone"
                   class="scale-10"
                 />
               </div>
@@ -172,8 +172,8 @@
             <div class="flex items-center space-x-3">
                 <div class="w-6">
                   <img
-                    src="assets/images/icon-email.svg"
-                    alt=""
+                    src="assets/images/icons/email.svg"
+                    alt="Click to send email"
                     class="scale-10"
                   />
                 </div>
@@ -181,6 +181,18 @@
                   dillonnollid@gmail.com
                 </a>
             </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-6">
+                <img
+                  src="assets/images/icons/location.svg"
+                  alt="Brixton Hill, London"
+                  class="scale-10"
+                />
+              </div>
+              <a href="#">
+                Brixton Hill, London
+              </a>
+          </div>
           </div>
 
           <!-- Menus -->
@@ -201,9 +213,18 @@
           <!-- Social Links -->
           <div class="flex justify-center pb-10 space-x-3">
             <div>
-              <a href="#" target="_blank">
+              <a href="https://www.linkedin.com/in/dillonrose/" target="_blank">
                 <img
-                  src="assets/images/linkedin.svg"
+                  src="assets/images/icons/linkedin.svg"
+                  alt=""
+                  class="p-2 bg-darkBlue rounded-full ficon"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/dillonnollid/" target="_blank">
+                <img
+                  src="assets/images/icons/github.svg"
                   alt=""
                   class="p-2 bg-darkBlue rounded-full ficon"
                 />
@@ -212,25 +233,25 @@
             <div>
               <a href="#" target="_blank">
                 <img
-                  src="assets/images/github.svg"
+                  src="assets/images/icons/facebook.svg"
                   alt=""
                   class="p-2 bg-darkBlue rounded-full ficon"
                 />
               </a>
             </div>
             <div>
-              <a href="#" target="_blank">
+              <a href="https://www.instagram.com/dillon.rosenkranz/" target="_blank">
                 <img
-                  src="assets/images/facebook.svg"
+                  src="assets/images/icons/instagram.svg"
                   alt=""
                   class="p-2 bg-darkBlue rounded-full ficon"
                 />
               </a>
             </div>
             <div>
-              <a href="#" target="_blank">
+              <a href="https://vsco.co/dillonnollid/gallery" target="_blank">
                 <img
-                  src="assets/images/instagram.svg"
+                  src="assets/images/icons/vsco.svg"
                   alt=""
                   class="p-2 bg-darkBlue rounded-full ficon"
                 />
