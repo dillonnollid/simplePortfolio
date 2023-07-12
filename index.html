@@ -83,6 +83,7 @@
           </button>
         </div>
 
+        
         <!-- Hamburger Mobile Button -->
         <div class="md:hidden">
           <button
@@ -106,8 +107,8 @@
         <a onclick="openPage('experience')" class="hover:text-pink-500">Experience</a>
         <a onclick="openPage('skills')" class="hover:text-pink-500">Skills</a>
         <a onclick="openPage('unused')" class="hover:text-pink-500">Unused</a>
-        
-        <button id="theme-toggle" class="themeToggleButton">Toggle Theme</button>
+
+        <a onclick="toggleMode()" class="hover:text-pink-500">Toggle Theme</a>
 
       </div>
 
@@ -156,7 +157,17 @@
                   class="scale-10"
                 />
               </div>
-              <a href="tel:+353877418321">+353 87 741 8321</a>
+              <a href="tel:+353877418321">IE: +353 87 741 8321</a>
+            </div>
+            <div class="flex items-center space-x-3 md:-mt-10">
+              <div class="w-6">
+                <img
+                  src="assets/images/icon-phone.svg"
+                  alt=""
+                  class="scale-10"
+                />
+              </div>
+              <a href="tel:+447882603594">UK: +44 788 260 3594</a>
             </div>
             <div class="flex items-center space-x-3">
                 <div class="w-6">
@@ -175,15 +186,15 @@
           <!-- Menus -->
           <div class="footerMenu">
             <div class="flexColSpace">
-              <a href="#">About</a>
-              <a href="#">Experience</a>
-              <a href="#">Projects</a>
-              <a href="#">Certificates</a>
+              <a onclick="openPage('about')" class="hover:text-pink-500">About</a>
+              <a onclick="openPage('testimonials')" class="hover:text-pink-500">Testimonials</a>
+              <a onclick="openPage('unused')" class="hover:text-pink-500">Unused</a>
+              
             </div>
             <div class="flexColSpace">
-              <a href="#">Contact</a>
-              <a href="#">Services</a>
-              <a href="#">Privacy</a>
+              <a onclick="openPage('projects')" class="hover:text-pink-500">Projects</a>
+              <a onclick="openPage('experience')" class="hover:text-pink-500">Experience</a>
+              <a onclick="openPage('skills')" class="hover:text-pink-500">Skills</a>
             </div>
           </div>
 

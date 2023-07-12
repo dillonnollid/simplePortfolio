@@ -44,6 +44,12 @@ function toggleMode() {
       localStorage.setItem('color-theme', 'dark')
     }
   }
+  //Close mobile menu if it's open 
+  if (menu.classList.contains('flex')) {
+    menuButton.classList.toggle('open')
+    menu.classList.toggle('flex')
+    menu.classList.toggle('hidden')
+  }
 }
 
 /* Hamburger Menu Toggler */
@@ -70,7 +76,9 @@ function openPage(url) {
     menu.classList.toggle('hidden')
   }
 
-  $("body").scrollTop(0);
+  //$("body").scrollTop(0);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
 }
 
 function setHamburgerColor(colour) {
