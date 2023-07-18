@@ -20,13 +20,16 @@ module.exports = {
         opensans: ['Open Sans', 'sans-serif'],
       },
       backgroundImage: (theme) => ({
-        'logo-dark-mode': "url('../images/icons/logo-dark.svg')",
-        'logo-light-mode': "url('../images/icons/logo-light.svg')",
+        'logo-dark-mode': "url('../images/icons/logo-new.svg')",
+        'logo-light-mode': "url('../images/icons/logo-new.svg')",
         'curvy-dark-mode': "url('../images/bg-curvy-dark.svg')",
         'curvy-light-mode': "url('../images/bg-curvy-light.svg')",
-        'head-covert-audio': "url('../images/headCovertAudio.jpeg')",
-        'head-image-exhibition': "url('../images/headImageExhibition.jpeg')",
-        'head-myd': "url('../images/headMyD.jpeg')",
+        'head-covert-audio': "url('../images/cards/covertAudio.jpeg')",
+        'head-image-exhibition': "url('../images/cards/imageExhibition.jpeg')",
+        'head-myd': "url('../images/cards/myD.jpeg')",
+        'head-rowley-dean': "url('../images/cards/rowleyDean.jpeg')",
+        'exp-sg': "url('../images/experience/sg-logo.png')"
+        
       }),
       maxWidth: {
         '1/2': '50%',
