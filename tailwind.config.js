@@ -28,8 +28,8 @@ module.exports = {
         'head-image-exhibition': "url('../images/cards/imageExhibition.jpeg')",
         'head-myd': "url('../images/cards/myD.jpeg')",
         'head-rowley-dean': "url('../images/cards/rowleyDean.jpeg')",
+        'head-portfolio': "url('../images/cards/portfolio.jpeg')",
         'exp-sg': "url('../images/experience/sg-logo.png')"
-        
       }),
       maxWidth: {
         '1/2': '50%',

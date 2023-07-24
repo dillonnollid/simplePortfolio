@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.ficon:hover {
-  filter: invert(80%) sepia(37%) saturate(7048%) hue-rotate(132deg)
-    brightness(105%) contrast(104%);
-}
-
 @layer base {
 
   body {
@@ -33,15 +28,15 @@
 }
 
 .dynamicLogo {
-  @apply bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-16 w-20 mx-auto my-auto md:absolute top-10 left-10;
+  @apply bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-16 w-20 mx-auto my-auto md:absolute top-6 left-10;
 }
 
 .navMenu {
-  @apply hidden md:flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10 cursor-pointer;
+  @apply hidden md:flex items-center justify-center md:space-x-8 md:absolute top-12 right-10;
 }
 
 .navItem {
-  @apply mx-2 group-hover:border-b group-hover:border-accentCyan hover:underline text-cyan-500 dark:text-cyan-300 hover:text-cyan-700 dark:hover:text-cyan-200;
+  @apply mx-2 group-hover:border-b group-hover:border-accentCyan text-cyan-500 dark:text-cyan-300 generalHover;
 }
 
 .themeToggleButton {
@@ -118,6 +113,18 @@
 
 .whiteParagraph {
   @apply mb-3 font-semibold text-sm leading-relaxed md:text-lg text-gray-100 ;
+}
+
+.generalHover {
+  @apply hover:text-cyan-600 hover:duration-150 dark:hover:text-cyan-200 hover:underline hover:cursor-pointer;
+}
+
+.ficon {
+  @apply p-2 bg-darkBlue rounded-full cyanHover;
+}
+
+.cyanHover {
+  @apply hover:bg-cyan-400 duration-300 md:hover:opacity-70;
 }
 
 /* Hide vertical scrollbar for Chrome, Safari and Opera */
