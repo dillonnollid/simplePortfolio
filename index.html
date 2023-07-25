@@ -32,18 +32,19 @@
       }
     </script>
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-N6N2XLR9');
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DP7VSP0PH8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DP7VSP0PH8');
     </script>
 
 </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6N2XLR9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
 
     <header>
       <nav>
@@ -58,7 +59,7 @@
           <a onclick="openPage('testimonials')" class="navItem">Testimonials</a>
           <a onclick="openPage('projects')" class="navItem">Projects</a>
           <a onclick="openPage('experience')" class="navItem">Experience</a>
-          <a onclick="openPage('skills')" class="navItem">Skills</a>
+          <!--<a onclick="openPage('skills')" class="navItem">Skills</a>-->
           <a onclick="openPage('hobbies')" class="navItem">Hobbies</a>
 
           <!-- Theme Toggle Button -->
@@ -116,7 +117,7 @@
         <a onclick="openPage('testimonials')" class="hover:text-blue-500">Testimonials</a>
         <a onclick="openPage('projects')" class="hover:text-blue-500">Projects</a>
         <a onclick="openPage('experience')" class="hover:text-blue-500">Experience</a>
-        <a onclick="openPage('skills')" class="hover:text-blue-500">Skills</a>
+        <!--<a onclick="openPage('skills')" class="hover:text-blue-500">Skills</a>-->
         <a onclick="openPage('hobbies')" class="hover:text-blue-500">Hobbies</a>
         <a onclick="toggleMode()" class="hover:text-cyan-500">Toggle Theme</a>
 
@@ -126,28 +127,12 @@
 
     <!-- Dynamic Page content to go here -->
     <div id="mainContent">
-      <!-- Loading Screen -->
-      <section class="heroSection">
-        <div class="heroContainer">
-          <img src="assets/images/bigIntroImage.png" alt="" class="mx-auto" />
-
-          <!--<h1 class="centeredHeading">
-            Dillon Rosenkranz<br>
-            Web Portfolio
-          </h1>
-          
-          <p class="centeredParagraph">
-            Browse through some of my experience, projects, education and more! 
-            Social links and contact details can be found below!
-          </p>-->
-
-          <button class="generalButton" onclick="openPage('about')">
-            Get Started
-          </button>
-
-        </div>
-      </section>
-
+      <script>
+        window.addEventListener('load', 
+          function() { 
+            openPage('intro');
+          }, false);
+        </script>
     </div>
 
     <!-- Footer -->
@@ -208,13 +193,12 @@
             <div class="flexColSpace">
               <a onclick="openPage('about')" class="generalHover">About</a>
               <a onclick="openPage('testimonials')" class="generalHover">Testimonials</a>
-              <a onclick="openPage('sandbox')" class="generalHover">Sandbox</a>
+              <a onclick="openPage('experience')" class="generalHover">Experience</a>
               
             </div>
             <div class="flexColSpace">
               <a onclick="openPage('projects')" class="generalHover">Projects</a>
-              <a onclick="openPage('experience')" class="generalHover">Experience</a>
-              <a onclick="openPage('skills')" class="generalHover">Skills</a>
+              <!--<a onclick="openPage('skills')" class="generalHover">Skills</a>-->
               <a onclick="openPage('hobbies')" class="generalHover">Hobbies</a>
             </div>
           </div>

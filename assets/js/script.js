@@ -16,6 +16,8 @@ if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localS
 // Listen for toggle button click
 themeToggleBtn.addEventListener('click', toggleMode)
 
+window.scrollTo(0, 0)
+
 function toggleMode() {
   // Toggle icon
   themeToggleDarkIcon.classList.toggle('hidden')
@@ -79,6 +81,7 @@ function openPage(url) {
 
   //$("body").scrollTop(0);
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
 
 }
 

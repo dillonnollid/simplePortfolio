@@ -29,6 +29,9 @@ module.exports = {
         'head-myd': "url('../images/cards/myD.jpeg')",
         'head-rowley-dean': "url('../images/cards/rowleyDean.jpeg')",
         'head-portfolio': "url('../images/cards/portfolio.jpeg')",
+        'hobby-general': "url('../images/cards/generalHobbies.jpeg')",
+        'hobby-tech': "url('../images/cards/techHobbies.jpeg')",
+        'hobby-interest': "url('../images/cards/currentInterests.jpeg')",
         'exp-sg': "url('../images/experience/sg-logo.png')"
       }),
       maxWidth: {
