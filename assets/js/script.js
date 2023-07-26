@@ -6,11 +6,11 @@ const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
   // Show Light Icons
   themeToggleLightIcon.classList.remove('hidden')
-  setHamburgerColor('white')
+  setHamburgerColor('#0bc0df')//Cyan
 } else {
   //Show Dark Icons
   themeToggleDarkIcon.classList.remove('hidden')
-  setHamburgerColor('black')
+  setHamburgerColor('#09c9e4')//Lighter Cyan
 }
 
 // Listen for toggle button click
@@ -29,22 +29,22 @@ function toggleMode() {
     if (localStorage.getItem('color-theme') === 'light') {
       document.documentElement.classList.add('dark')
       localStorage.setItem('color-theme', 'dark')
-      setHamburgerColor('white')
+      setHamburgerColor('#0bc0df')//Cyan
     } else {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('color-theme', 'light')
-      setHamburgerColor('black')
+      setHamburgerColor('#09c9e4')//Lighter
     }
   } else {
     // If not in localstorage then add it
     if (document.documentElement.classList.contains('dark')) {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('color-theme', 'light')
-      setHamburgerColor('black')
+      setHamburgerColor('#09c9e4')//Lighter
     } else {
       document.documentElement.classList.add('dark')
       localStorage.setItem('color-theme', 'dark')
-      setHamburgerColor('white')
+      setHamburgerColor('#0bc0df')//Cyan
     }
   }
   //Close mobile menu if it's open 

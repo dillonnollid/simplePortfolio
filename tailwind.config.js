@@ -16,8 +16,7 @@ module.exports = {
         lightRed: 'hsl(0, 100%, 63%)',
       },
       fontFamily: {
-        sans: ['Raleway', 'sans-serif'],
-        opensans: ['Open Sans', 'sans-serif'],
+        spartan: ['LeagueSpartan', 'sans-serif']
       },
       backgroundImage: (theme) => ({
         'logo-dark-mode': "url('../images/icons/logo-new.svg')",
