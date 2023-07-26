@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -55,12 +55,30 @@
 
         <!-- Menu -->
         <div class="navMenu">
-          <a onclick="openPage('about')" class="navItem">About</a>
-          <a onclick="openPage('testimonials')" class="navItem">Testimonials</a>
-          <a onclick="openPage('projects')" class="navItem">Projects</a>
-          <a onclick="openPage('experience')" class="navItem">Experience</a>
-          <!--<a onclick="openPage('skills')" class="navItem">Skills</a>-->
-          <a onclick="openPage('hobbies')" class="navItem">Hobbies</a>
+          <a onclick="openPage('about')" class="navItem group">
+            About
+            <span class="hoverUnderline"></span>
+          </a>
+          <a onclick="openPage('testimonials')" class="navItem group">
+            Testimonials
+            <span class="hoverUnderline"></span>
+          </a>
+          <a onclick="openPage('projects')" class="navItem group">
+            Projects
+            <span class="hoverUnderline"></span>
+          </a>
+          <a onclick="openPage('experience')" class="navItem group">
+            Experience
+            <span class="hoverUnderline"></span>
+          </a>
+          <!--<a onclick="openPage('skills')" class="navItem group">
+            Skills
+            <span class="hoverUnderline"></span>
+          </a>-->
+          <a onclick="openPage('hobbies')" class="navItem group">
+            Hobbies
+            <span class="hoverUnderline"></span>
+          </a>
 
           <!-- Theme Toggle Button -->
           <button id="theme-toggle" class="themeToggleButton">
@@ -113,13 +131,13 @@
 
       <!-- Mobile Menu -->
       <div id="menu" class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-darkBlue3">
-        <a onclick="openPage('about')" class="hover:text-blue-500">About</a>
-        <a onclick="openPage('testimonials')" class="hover:text-blue-500">Testimonials</a>
-        <a onclick="openPage('projects')" class="hover:text-blue-500">Projects</a>
-        <a onclick="openPage('experience')" class="hover:text-blue-500">Experience</a>
-        <!--<a onclick="openPage('skills')" class="hover:text-blue-500">Skills</a>-->
-        <a onclick="openPage('hobbies')" class="hover:text-blue-500">Hobbies</a>
-        <a onclick="toggleMode()" class="hover:text-cyan-500">Toggle Theme</a>
+        <a onclick="openPage('about')" class="generalHover">About</a>
+        <a onclick="openPage('testimonials')" class="generalHover">Testimonials</a>
+        <a onclick="openPage('projects')" class="generalHover">Projects</a>
+        <a onclick="openPage('experience')" class="generalHover">Experience</a>
+        <!--<a onclick="openPage('skills')" class="generalHover">Skills</a>-->
+        <a onclick="openPage('hobbies')" class="generalHover">Hobbies</a>
+        <a onclick="toggleMode()" class="generalHover">Toggle Theme</a>
 
       </div>
 
@@ -152,7 +170,10 @@
                   class="scale-10"
                 />
               </div>
-              <a href="tel:+447882603594" class="generalHover">UK: +44 788 260 3594</a>
+              <a href="tel:+447882603594" class="generalHover group">
+                UK: +44 788 260 3594
+                <span class="hoverUnderline"></span>
+              </a>
             </div>
             <div class="flex items-center space-x-3 md:-mt-10">
               <div class="w-6">
@@ -162,7 +183,10 @@
                   class="scale-10"
                 />
               </div>
-              <a href="tel:+353877418321" class="generalHover">IE: +353 87 741 8321</a>
+              <a href="tel:+353877418321" class="generalHover group">
+                IE: +353 87 741 8321
+                <span class="hoverUnderline"></span>
+              </a>
             </div>
             <div class="flex items-center space-x-3">
                 <div class="w-6">
@@ -172,8 +196,9 @@
                     class="scale-10"
                   />
                 </div>
-                <a href="mailto:email@example.com" class="generalHover">
+                <a href="mailto:email@example.com" class="generalHover group">
                   dillonnollid@gmail.com
+                  <span class="hoverUnderline"></span>
                 </a>
             </div>
             <div class="flex items-center space-x-3">
@@ -184,22 +209,44 @@
                   class="scale-10"
                 />
               </div>
-              <a href="#" class="generalHover">Brixton Hill, London</a>
+              <a href="#" class="generalHover group">
+                Brixton Hill, London
+                <span class="hoverUnderline"></span>
+              </a>
           </div>
           </div>
 
           <!-- Menus -->
           <div class="footerMenu">
             <div class="flexColSpace">
-              <a onclick="openPage('about')" class="generalHover">About</a>
-              <a onclick="openPage('testimonials')" class="generalHover">Testimonials</a>
-              <a onclick="openPage('experience')" class="generalHover">Experience</a>
+              <a onclick="openPage('about')" class="generalHover group">
+                About
+                <span class="hoverUnderline"></span>
+              </a>
+              <a onclick="openPage('testimonials')" class="generalHover group">
+                Testimonials
+                <span class="hoverUnderline"></span>
+              </a>
+              <a onclick="openPage('experience')" class="generalHover group">
+                Experience
+                <span class="hoverUnderline"></span>
+              </a>
               
             </div>
             <div class="flexColSpace">
-              <a onclick="openPage('projects')" class="generalHover">Projects</a>
-              <!--<a onclick="openPage('skills')" class="generalHover">Skills</a>-->
-              <a onclick="openPage('hobbies')" class="generalHover">Hobbies</a>
+              <a onclick="openPage('projects')" class="generalHover group">
+                Projects
+                <span class="hoverUnderline"></span>
+              </a>
+              <!--<a onclick="openPage('skills')" class="generalHover group">
+                Skills
+                <span class="hoverUnderline"></span>
+              </a>-->
+              <a onclick="openPage('hobbies')" class="generalHover group">
+                Hobbies
+                <span class="hoverUnderline"></span>
+              </a>
+
             </div>
           </div>
 

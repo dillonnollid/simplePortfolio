@@ -4,7 +4,7 @@
   "description": "Simple Portfolio Website built using HTML, CSS(Tailwind), JS and more!",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css",
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --minify",
     "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --watch"
   },
   "keywords": [],

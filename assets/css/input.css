@@ -27,15 +27,19 @@
 }
 
 .dynamicLogo {
-  @apply bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-16 w-20 mx-auto my-auto md:absolute top-6 left-10;
+  @apply bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-14 w-20 mx-auto my-auto md:absolute top-6 left-10;
 }
 
 .navMenu {
-  @apply hidden md:flex items-center justify-center md:space-x-8 md:absolute top-12 right-10;
+  @apply hidden md:flex items-center justify-center md:space-x-8 md:absolute top-12 right-10 transition duration-300;
 }
 
 .navItem {
   @apply mx-2 group-hover:border-b group-hover:border-accentCyan text-cyan-500 dark:text-cyan-300 generalHover;
+}
+
+.hoverUnderline {
+  @apply block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-cyan-600;
 }
 
 .themeToggleButton {
@@ -115,7 +119,7 @@
 }
 
 .generalHover {
-  @apply hover:text-cyan-600 hover:duration-150 dark:hover:text-cyan-200 hover:underline hover:cursor-pointer;
+  @apply hover:text-cyan-600 dark:hover:text-cyan-200 hover:cursor-pointer hover:duration-300;
 }
 
 .ficon {

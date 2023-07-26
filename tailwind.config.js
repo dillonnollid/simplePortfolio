@@ -38,49 +38,55 @@ module.exports = {
         '1/2': '50%',
         '1/3': '33%',
       },
+      animation: {
+        'fadeIn': 'fadeInFrame 2s ease-in forwards',
+        'gradient-x':'gradient-x 15s ease infinite',
+        'gradient-y':'gradient-y 15s ease infinite',
+        'gradient-xy': 'gradient-xy 15s ease infinite',
+      },
+      keyframes: {
+        'fadeInFrame': {
+          '0%': { 'opacity': '0' },
+          '100%': { 'opacity': '1' }
+        },
+        'gradient-y': {
+            '0%, 100%': {
+                'background-size':'400% 400%',
+                'background-position': 'center top'
+            },
+            '50%': {
+                'background-size':'200% 200%',
+                'background-position': 'center center'
+            }
+        },
+        'gradient-x': {
+            '0%, 100%': {
+                'background-size':'200% 200%',
+                'background-position': 'left center'
+            },
+            '50%': {
+                'background-size':'200% 200%',
+                'background-position': 'right center'
+            }
+        },
+        'gradient-xy': {
+            '0%, 100%': {
+                'background-size':'400% 400%',
+                'background-position': 'left center'
+            },
+            '50%': {
+                'background-size':'200% 200%',
+                'background-position': 'right center'
+            }
+        },
+      },
+
     },
   },
-  'animation': {
-    'gradient-x':'gradient-x 15s ease infinite',
-    'gradient-y':'gradient-y 15s ease infinite',
-    'gradient-xy':'gradient-xy 15s ease infinite',
-  },
-  'keyframes': {
-    'gradient-y': {
-        '0%, 100%': {
-            'background-size':'400% 400%',
-            'background-position': 'center top'
-        },
-        '50%': {
-            'background-size':'200% 200%',
-            'background-position': 'center center'
-        }
-    },
-    'gradient-x': {
-        '0%, 100%': {
-            'background-size':'200% 200%',
-            'background-position': 'left center'
-        },
-        '50%': {
-            'background-size':'200% 200%',
-            'background-position': 'right center'
-        }
-    },
-    'gradient-xy': {
-        '0%, 100%': {
-            'background-size':'400% 400%',
-            'background-position': 'left center'
-        },
-        '50%': {
-            'background-size':'200% 200%',
-            'background-position': 'right center'
-        }
-    }
-  },
+  
   variants: {
-    extend: {
-      backgroundImage: ['dark'],
-    },
+    animation: ["motion-safe"],
+    backgroundImage: ['dark'],
   },
   plugins: [],
 }

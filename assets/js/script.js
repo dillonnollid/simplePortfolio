@@ -70,7 +70,9 @@ function navToggle() {
 function openPage(url) {
   var encodedUrl = encodeURI("views/sections/" + url + ".html");
   
-  $('#mainContent').load(encodedUrl,function(){}).hide().fadeIn();
+  $('#mainContent').fadeOut(function () {
+    $('#mainContent').load(encodedUrl).fadeIn("slow");
+  });
 
   //Close menu when opening page 
   if (menu.classList.contains('flex')) {
